@@ -326,7 +326,7 @@ section {
     box-shadow: 0 0 50px var(--main-color);
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 600px) {
     .servicio__h2 {
         font-size: 3rem;
     }
@@ -398,7 +398,7 @@ section {
     }
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 600px) {
     .skills__h2 {
         font-size: 3rem;
     }
@@ -536,17 +536,21 @@ section {
 
 /* MEDIA QUERY EDUCACION */
 
-@media screen and (max-width: 430px){
-    .educacion__h2 {
-        font-size: 3rem;
+@media screen and (max-width: 600px){
+
+    .educacion .contenedor::after {
+        font-size: 1.3rem;
     }
 
-    .contenedor__educacion {
-        display: flex;
+    .tag h2 {
+        font-size: 1rem;
+        
+    }
+
+    .decs p {
+        font-size: 0.6rem;
     }
 }
-
-
 /* CONTACTO */
 
 .contacto__h2 {
