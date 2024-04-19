@@ -14,20 +14,16 @@
 <body>
     <!-- BARRA DE NAVEGACION -->
     <header class="header">
+        <a href="#" class="logo">Gastón</a>
+
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
 
         <nav class="navbar">
-            <div class="navbar__logo">
-                <a href="#" class="logo">GASTÓN MACIAS</a>
-            </div>
-            <div class="navbar__lista">
-                <ul class="navbar__ul">
-                    <li class="navbar__item"><a href="#home" class="navbar__link">HOME</a></li>
-                    <li class="navbar__item"><a href="#servicio" class="navbar__link">SERVICIOS</a></li>
-                    <li class="navbar__item"><a href="#skills" class="navbar__link">HABILIDADES</a></li>
-                    <li class="navbar__item"><a href="#educacion" class="navbar__link">EDUCACIÓN</a></li>
-                    <li class="navbar__item"><a href="#contacto" class="navbar__link">CONTACTO</a></li>
-                </ul>
-            </div>
+            <a href="#home" class="navbar__link">HOME</a>
+            <a href="#servicio" class="navbar__link">SERVICIOS</a>
+            <a href="#skills" class="navbar__link">HABILIDADES</a>
+            <a href="#educacion" class="navbar__link">EDUCACIÓN</a>
+            <a href="#contacto" class="navbar__link">CONTACTO</a>
         </nav>
     </header>
 
@@ -36,14 +32,16 @@
 
     <section class="home" id="home">
         <div class="home__img">
-            <img src="./IMAGENES/avatar gaston.jpg" alt="AVATAR GASTON">
+            <img src="./IMAGENES/avatar gaston.jpg" alt="AVATAR GASTÓN">
         </div>
 
         <div class="home__presentacion">
-            <h2>Hola, soy <b class="name">Gastón</b></h2>
-            <p class="home__p1">Soy estudiante de <B class="name">DESARROLLO FRONTEND</B> y <b class="name">SOFTWARE
-                    TESTER</b></p>
-            <p class="home__p2">Ademas soy Técnico <b class="name">Electrónico</b> orientado a las telecomunicaciones
+            <h1>Hola, soy <span class="name">Gastón</span></h1>
+            <p class="home__p1">Soy estudiante de <span class="name">DESARROLLO FRONTEND</span> y <span
+                    class="name">SOFTWARE
+                    TESTER</span></p>
+            <p class="home__p2">Ademas soy <span class="name">TÉCNICO ELECTRONICO</span> orientado a las
+                telecomunicaciones
             </p>
 
             <div class="home__vinculos">
@@ -66,16 +64,13 @@
         <h2 class="servicio__h2">SERVICIOS</h2>
 
         <div class="servicios__contenedor">
-
             <div class="servicio__card">
                 <h3 class="servicio__h3">Desarrollo FRONTEND</h3>
-                <p class="servicio__p">Lorem ipsum dolor sit
-                    amet consectetur adipisicing elit. Quasi, temporibus.</p>
+                <p class="servicio__p">Conocimientos en HTML, CSS y JavaScript. En aprendizaje de REACT</p>
             </div>
             <div class="servicio__card">
                 <h3 class="servicio__h3">Software Tester</h3>
-                <p class="servicio__p">Lorem ipsum dolor sit
-                    amet consectetur adipisicing elit. Quasi, temporibus.</p>
+                <p class="servicio__p">Conocimientos en pruebas manuales y automatizados</p>
             </div>
             <!-- <div class="servicio__card">
                 <h3 class="servicio__h3">Desarrollo FRONTEND</h3>
@@ -87,49 +82,54 @@
 
     <!-- skills -->
 
-    <h2 class="skills__h2">HABILIDADES</h2>
-    <section class="skills__contenedor skills" id="skills">
-        <div class="skill__card">
-            <img src="./LOGOS/html-5.png" alt="logo HTML">
-            <h3>HTML</h3>
-            <P>Lorem ipsum</P>
-        </div>
-        <div class="skill__card">
-            <img src="./LOGOS/CSS.png" alt="logo CSS">
-            <h3>CSS</h3>
-            <P>Lorem ipsum</P>
-        </div>
-        <div class="skill__card">
-            <img src="./LOGOS/js.png" alt="logo javascript">
-            <h3>JAVASCRIPT</h3>
-            <P>Lorem ipsum</P>
-        </div>
-        <div class="skill__card">
-            <img src="./LOGOS/REACT.png" alt="Logo REACT">
-            <h3>REACT</h3>
-            <P>EN PROCESO DE APRENDIZAJE</P>
-        </div>
-        <div class="skill__card">
-            <img src="./LOGOS/visual studio code.png" alt="Logo vsc">
-            <h3>VISUAL STUDIO CODE</h3>
-            <P>Lorem ipsum</P>
-        </div>
-        <div class="skill__card">
-            <img src="./LOGOS/ilustraitor.png" alt="Logo ILLUSTRATOR">
-            <h3>ILLUSTRATOR</h3>
-            <P>Lorem ipsum</P>
-        </div>
-        <div class="skill__card">
-            <img src="./LOGOS/photoshop.png" alt="Logo photoshop">
-            <h3>PHOTOSHOP</h3>
-            <P>Lorem ipsum</P>
-        </div>
-        <!-- <div class="skill__card">
+
+
+    <section class="skills" id="skills">
+
+        <h2 class="skills__h2">HABILIDADES</h2>
+
+        <div class="contenedor__skills">
+            <div class="skill__card">
+                <img src="./LOGOS/html-5.png" alt="logo HTML">
+                <h3>HTML</h3>
+                <P>100%</P>
+            </div>
+            <div class="skill__card">
+                <img src="./LOGOS/CSS.png" alt="logo CSS">
+                <h3>CSS</h3>
+                <P>80%</P>
+            </div>
+            <div class="skill__card">
+                <img src="./LOGOS/js.png" alt="logo javascript">
+                <h3>JAVASCRIPT</h3>
+                <P>60%</P>
+            </div>
+            <div class="skill__card">
+                <img src="./LOGOS/REACT.png" alt="Logo REACT">
+                <h3>REACT</h3>
+                <P>EN PROCESO DE APRENDIZAJE</P>
+            </div>
+            <div class="skill__card">
+                <img src="./LOGOS/visual studio code.png" alt="Logo vsc">
+                <h3>VISUAL STUDIO CODE</h3>
+                <P>80%</P>
+            </div>
+            <div class="skill__card">
+                <img src="./LOGOS/ilustraitor.png" alt="Logo ILLUSTRATOR">
+                <h3>ILLUSTRATOR</h3>
+                <P>80%</P>
+            </div>
+            <div class="skill__card">
+                <img src="./LOGOS/photoshop.png" alt="Logo photoshop">
+                <h3>PHOTOSHOP</h3>
+                <P>80%</P>
+            </div>
+            <!-- <div class="skill__card">
             <img src="./LOGOS/" alt="Logo REACT">
             <h3>REACT</h3>
             <P>Lorem ipsum</P>
         </div> -->
-
+        </div>
     </section>
 
     <!-- EDUCACION -->
@@ -189,6 +189,7 @@
     </section>
 
     <section class="contacto" id="contacto">
+
         <h2 class="contacto__h2">CONTACTO</h2>
         <div class="contenedor__contacto">
             <div>
@@ -201,7 +202,8 @@
                 <input class="input" type="text" placeholder="Asunto">
             </div>
             <div>
-                <textarea class="textarea" name="" id="" cols="30" rows="10" placeholder="Escribe tu mensaje"></textarea>
+                <textarea class="textarea" name="" id="" cols="30" rows="10"
+                    placeholder="Escribe tu mensaje"></textarea>
             </div>
         </div>
     </section>
