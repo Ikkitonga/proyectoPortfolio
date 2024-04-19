@@ -538,6 +538,9 @@ section {
 
 @media screen and (max-width: 600px){
 
+    .educacion__h2 {
+        font-size: 3rem;
+    }
     .educacion .contenedor::after {
         font-size: 1.3rem;
     }
