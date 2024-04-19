@@ -1,3 +1,4 @@
+/* RESET Y PARAMETROS GENERALES */
 * {
     margin: 0;
     padding: 0;
@@ -31,35 +32,52 @@ html::-webkit-scrollbar {
 
 html::-webkit-scrollbar-track {
     background: var(--bg-color);
-} 
+}
 
 html::-webkit-scrollbar-thumb {
     background: var(--main-color);
-}  
+}
+
+section {
+    min-height: 100vh;
+}
 
 
 /* BARRA DE NAVEGACION header*/
 
 .header {
-    position: sticky;
+    position: fixed;
     top: 0;
-    padding: 1rem;
-    background-color: var(--bg-color);
-    z-index: 1000;
+    left: 0;
+    width: 100%;
+    padding: 2rem 5%;
+    background: rgba(0, 0, 0, 0.7);
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
 }
 
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--main-color);
+    display: none;
 }
 
 .logo {
     font-size: 2rem;
-    color: var(--text-color);
+    color: var(--main-color);
+    font-weight: bolder;
+    text-decoration: underline var(--main-color);
+    transition: 0.5s ease;
 }
 
-.navbar__ul {
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -70,40 +88,74 @@ html::-webkit-scrollbar-thumb {
 .navbar__link {
     text-decoration: none;
     color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 400;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
 }
 
 .navbar__link:hover {
     color: var(--main-color);
 }
 
-.navbar__item:hover {
+.navbar__link:hover {
     transform: scale(1.4);
     text-decoration: underline var(--main-color);
+    font-weight: 700;
+}
+
+/* media query para el navbar */
+
+@media screen and (max-width: 995px) {
+
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid var(--secondary-color);
+        border-bottom: 3px solid var(--secondary-color);
+        border-bottom-left-radius: 2rem;
+        padding: 1rem 3%;
+        background-color: var(--bg-color);
+        display: none;
+    }
+
+    .navbar__link {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .navbar__link:hover {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid var(--main-color);
+    }
 }
 
 
 /* PRESENTACION HOME */
 
-
 .home {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 8rem;
+    background-color: var(--bg-color);
 }
 
-.home{
-    height: 70vh;
-}
 
 .home__img img {
     border-radius: 50%;
-    width: 250px;
+    width: 20vw;
     box-shadow: 0 0 25px var(--main-color);
 }
 
-.name {
-    color: var(--main-color);
-}
 
 .home__img img:hover {
     transform: scale(1.1);
@@ -117,25 +169,27 @@ html::-webkit-scrollbar-thumb {
     gap: 1rem;
 }
 
-.home__presentacion h2 {
+.name {
+    color: var(--main-color);
+    font-weight: 700;
+}
+
+.home__presentacion h1 {
     font-size: 3rem;
 }
 
+.home__p2,
 .home__p1 {
     font-size: 1.5rem;
-}
-
-.home__p2{
-    font-size: 1.5rem;
     line-height: 1.5rem;
-    
 }
 
 .home__vinculos {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: space-around;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
+    transition: 0.3s ease;
 }
 
 .home__vinculos i {
@@ -145,48 +199,87 @@ html::-webkit-scrollbar-thumb {
 }
 
 
-.curriculum{
+.curriculum {
+    display: inline-block;
     text-decoration: none;
     border: 1px solid var(--text-color);
-    border-radius: 1rem;
-    padding: 0.7rem;
-    color: var(--text-color);
+    border-radius: 4rem;
+    padding: 1rem 2.8rem;
+    color: var(--main-color);
+    background: var(--bg-color);
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3s ease;
 }
 
 .home__vinculos i:hover {
-    transform: scale(1.1);
+    transform: scale(1.1)translateY(-5px);
     color: var(--main-color);
     box-shadow: 0 0 50px var(--main-color);
 }
 
-.curriculum:hover{
-    background-color:var(--main-color);
-    transform: scale(1.1);
+.curriculum:hover {
+    background-color: var(--main-color);
+    transform: scale(1.03);
     color: var(--text-color);
-    filter: drop-shadow(0 0 50px var(--main-color));
+    box-shadow: (0 0 50px var(--main-color));
+}
+
+
+/* MEDIA QUERY PRESENTACION HOME */
+
+@media screen and (max-width: 995px) {
+    .home {
+        gap: 4rem;
+    }
+
+    .home__img img {
+        width: 30vw;
+    }
+
+    .home__p2,
+    .home__p1 {
+        font-size: 1.1rem;
+        line-height: 1.1rem;
+    }
+
+
+    .home__vinculos i {
+        font-size: 2rem;
+    }
+
+    .curriculum {
+        font-size: 1rem;
+        padding: 0.5rem 1.4rem;
+    }
 }
 
 
 /* SERVICIOS */
 
-.servicio__h2{
+.section__servicio {
+    background-color: var(--bg-color);
+}
+
+.servicio__h2 {
     text-align: center;
-    font-size: 2rem;
-    margin-top: 3rem;
+    font-size: 4rem;
+    margin: 3rem; 
 }
 
 .servicios__contenedor {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin: 2rem;
-    gap: 1rem;
-    height: 50vh;
+    gap: 2rem;
 }
 
 .servicio__card {
-    border: 1px solid var(--secondary-color);
-    border-radius: 2rem;
+    height: 250px;
+    width: 500px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 3rem;
     padding: 3rem;
 }
 
@@ -208,19 +301,22 @@ html::-webkit-scrollbar-thumb {
 
 /* SKILLS */
 
+.skills {
+    background-color: var(--bg-color);
+}
 
-.skills__h2{
+
+.skills__h2 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 4rem;
     margin: 3rem;
 }
 
-.skills__contenedor {
+.contenedor__skills {
     display: grid;
     grid-template-columns: auto auto auto auto;
-    gap: 1rem;
+    gap: 1.8rem;
     justify-content: center;
-    margin: 2rem;
 }
 
 .skill__card {
@@ -233,7 +329,7 @@ html::-webkit-scrollbar-thumb {
     border-radius: 2rem;
     width: 200px;
     height: 200px;
-    
+    text-align: center;
 }
 
 .skill__card img {
@@ -244,14 +340,20 @@ html::-webkit-scrollbar-thumb {
     box-shadow: 0 0 50px var(--main-color);
 }
 
+/* MEDIA QUERY SKILLS */
+
+
 
 /* EDUCACION */
 
+.educacion {
+    background-color: var(--bg-color);
+}
+
 .educacion__h2 {
     text-align: center;
-    margin-top: 5rem;
-    margin-bottom: 3rem;
-    font-size: 2rem;
+    margin: 3rem;
+    font-size: 4rem;
 }
 
 .educacion .timeline {
@@ -261,7 +363,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 .educacion .timeline::after {
-    content : '';
+    content: '';
     position: absolute;
     width: 6px;
     background: var(--secondary-color);
@@ -269,13 +371,14 @@ html::-webkit-scrollbar-thumb {
     bottom: 0;
     left: 50%;
     margin-left: -3px;
+    z-index: -2px;
 }
 
 .educacion .contenedor {
     padding: 10px 40px;
     position: relative;
     background-color: inherit;
-    width: 50%;    
+    width: 50%;
 }
 
 .educacion .contenedor::after {
@@ -306,7 +409,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 .educacion .izquierdo::before {
-    content: " ";
+    content: '';
     height: 0;
     position: absolute;
     top: 22px;
@@ -319,7 +422,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 .educacion .derecho::before {
-    content: " ";
+    content: '';
     height: 0;
     position: absolute;
     top: 22px;
@@ -328,10 +431,10 @@ html::-webkit-scrollbar-thumb {
     left: 30px;
     border: medium solid var(--secondary-color);
     border-width: 10px 10px 10px 0;
-    border-color: transparent var(--secondary-color) transparent transparent ;
+    border-color: transparent var(--secondary-color) transparent transparent;
 }
 
-.educacion .derecho::after{
+.educacion .derecho::after {
     left: -16px;
 }
 
@@ -341,9 +444,10 @@ html::-webkit-scrollbar-thumb {
     border-radius: 6px;
 }
 
-.educacion .contenido .tag{
+
+.educacion .contenido .tag {
     font-size: 1.5rem;
-    padding-top: 1.5rem;
+    padding-top: 1rem;
     padding-left: 1.5rem;
 }
 
@@ -353,13 +457,14 @@ html::-webkit-scrollbar-thumb {
 }
 
 
-/* CONTACTO */
 
+
+/* CONTACTO */
 
 .contacto__h2 {
     text-align: center;
-    margin-top: 5rem;
-    margin-bottom: 3rem;
+    margin: 3rem;
+    font-size: 4rem;
 }
 
 .contenedor__contacto {
@@ -386,3 +491,9 @@ html::-webkit-scrollbar-thumb {
     font-size: 1rem;
     border: var(--main-color) 3px solid;
 }
+
+
+/* RESPONSIVE */
+
+
+@media screen and (max-width: 430px) {}
