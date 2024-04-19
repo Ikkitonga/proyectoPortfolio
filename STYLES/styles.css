@@ -138,6 +138,16 @@ section {
     }
 }
 
+@media screen and (max-width: 430px){
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    #menu-icon {
+        font-size: 2rem;
+    }
+}
+
 
 /* PRESENTACION HOME */
 
@@ -255,6 +265,24 @@ section {
     }
 }
 
+@media screen and (max-width: 430px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .home__presentacion h1 {
+        font-size: 2rem;
+    }
+
+    .home__img img {
+        width: 45vw;
+    }
+}
+
+
 
 /* SERVICIOS */
 
@@ -297,6 +325,28 @@ section {
 .servicio__card:hover {
     box-shadow: 0 0 50px var(--main-color);
 }
+
+@media screen and (max-width: 430px) {
+    .servicio__h2 {
+        font-size: 3rem;
+    }
+
+    .servicios__contenedor{
+        flex-direction: column;
+    }
+
+    .servicio__card {
+        width: 300px;
+    }
+
+    .servicio__h3 {
+        font-size: 2rem;
+    }
+
+    .servicio__p {
+        font-size: 1rem;
+    }
+}  
 
 
 /* SKILLS */
@@ -342,6 +392,33 @@ section {
 
 /* MEDIA QUERY SKILLS */
 
+@media screen and (max-width: 995px) {
+    .contenedor__skills {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .skills__h2 {
+        font-size: 3rem;
+    }
+
+    .contenedor__skills {
+        grid-template-columns: auto auto;
+    }
+
+    .skill__card {
+        width: 90%;
+    }
+
+    .skill__card img {
+        width: 40px;
+    }
+
+    .skill__card p {
+        font-size: 0.8rem;
+    }
+}
 
 
 /* EDUCACION */
@@ -457,6 +534,17 @@ section {
 }
 
 
+/* MEDIA QUERY EDUCACION */
+
+@media screen and (max-width: 430px){
+    .educacion__h2 {
+        font-size: 3rem;
+    }
+
+    .contenedor__educacion {
+        display: flex;
+    }
+}
 
 
 /* CONTACTO */
@@ -492,8 +580,23 @@ section {
     border: var(--main-color) 3px solid;
 }
 
+.contacto__boton {
+    padding: 1rem 3rem;
+    border: var(--main-color) 3px solid;
+    font-size: 1.3rem;
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    cursor: pointer;
+}
+
+.contacto__boton:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 25px var(--main-color));
+}
 
 /* RESPONSIVE */
 
 
-@media screen and (max-width: 430px) {}
+@media screen and (max-width: 430px) {
+
+}
