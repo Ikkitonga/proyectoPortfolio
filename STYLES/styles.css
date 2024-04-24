@@ -339,6 +339,7 @@ i.menu-close {
 
 .habilidades {
     background-color: var(--bg-color);
+    flex-direction: column;
 }
 
 .habilidades__h2 {
@@ -354,6 +355,12 @@ i.menu-close {
     color: var(--text-color);
 }
 
+.habilidades__contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
 
 .habilidades {
     display: flex;
@@ -415,7 +422,7 @@ i.menu-close {
                                                              /* MEDIA QUERY HABILIDADES */
 
 @media screen and (max-width: 995px) {
-    .habilidades {
+    .habilidades__contenedor {
         flex-direction: column;
     }
 }
@@ -454,6 +461,7 @@ i.menu-close {
     border-bottom: var(--main-color) 1px solid;
     border-top: var(--main-color) 1px solid;
     color: var(--text-color);
+    padding-bottom: 2rem;
 }
 
 .educacion__h2 {
@@ -589,6 +597,7 @@ i.menu-close {
         margin-right: 2rem;
     }
 }
+
 
 
                                                                 /* CONTACTO */
