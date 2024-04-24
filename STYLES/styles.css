@@ -300,8 +300,7 @@ i.menu-close {
     .home {
         flex-direction: column;
         text-align: center;
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
+        gap: 2rem;
     }
 
     .home__presentacion h1 {
@@ -309,7 +308,7 @@ i.menu-close {
     }
 
     .home__img img {
-        width: 45vw;
+        width: 20vw;
     }
 }
 
