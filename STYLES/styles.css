@@ -187,6 +187,7 @@ i.menu-close {
     background-color: var(--secondary-bg-color);
     border-bottom: var(--main-color) 1px solid;
     width: 100vw;
+    padding-right: 0.5rem;
 }
 
 
@@ -339,6 +340,7 @@ i.menu-close {
 .habilidades {
     background-color: var(--bg-color);
     flex-direction: column;
+    border-bottom: var(--main-color) 1px solid;
 }
 
 .habilidades__h2 {
@@ -457,143 +459,179 @@ i.menu-close {
 
 .educacion {
     background-color: var(--secondary-bg-color);
+    padding-top: 2rem;
     border-bottom: var(--main-color) 1px solid;
-    border-top: var(--main-color) 1px solid;
-    color: var(--text-color);
-    padding-bottom: 2rem;
 }
 
 .educacion__h2 {
     text-align: center;
-    margin: 3rem;
-    font-size: 4rem;
-    color: var(--bg-color);
+    font-size: 3.5rem;
+    padding-bottom: 2rem;
+    color: var(--text-color);
 }
 
-.educacion .timeline {
+
+.timeline {
     position: relative;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 100px auto;
 }
 
-.educacion .timeline::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    background: var(--main-color);
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -3px;
-    z-index: -2px;
-}
-
-.educacion .contenedor {
-    padding: 10px 40px;
+.timeline__contenedor {
+    padding: 10px 50px;
     position: relative;
-    background-color: inherit;
     width: 50%;
+    animation: movedown 1s linear forwards;
+    opacity: 0;
 }
 
-.educacion .contenedor::after {
-    content: '\f501';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    line-height: 25px;
-    right: -17px;
-    background-color: var(--text-color);
-    border: 5px solid var(--main-color);
-    top: 15px;
-    border-radius: 50%;
-    z-index: 100;
-    font-size: 1.89rem;
-    text-align: center;
-    font-weight: 600;
-    font-family: "Font Awesome\ 5 Free";
-    color: var(--bg-color);
+@keyframes movedown {
+    0% {
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
-.educacion .izquierdo {
-    left: 0;
+.timeline__contenedor:nth-child(1) {
+    animation-delay: 0s;
 }
 
-.educacion .derecho {
-    left: 50%;
+.timeline__contenedor:nth-child(2) {
+    animation-delay: 1s;
 }
 
-.educacion .izquierdo::before {
-    content: '';
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    right: 30px;
-    border: medium solid var(--bg-color);
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent var(--bg-color);
+.timeline__contenedor:nth-child(3) {
+    animation-delay: 2s;
 }
 
-.educacion .derecho::before {
-    content: '';
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    left: 30px;
-    border: medium solid var(--bg-color);
-    border-width: 10px 10px 10px 0;
-    border-color: transparent var(--bg-color) transparent transparent;
+.timeline__contenedor:nth-child(4) {
+    animation-delay: 3s;
 }
 
-.educacion .derecho::after {
-    left: -16px;
+.timeline__contenedor:nth-child(5) {
+    animation-delay: 4s;
 }
 
-.educacion .contenido {
+
+.timeline__box {
+    padding: 20px 30px;
     background: var(--bg-color);
     position: relative;
     border-radius: 6px;
-    margin: 5px;
+    font-size: 15px;
+}
+
+.timeline__text {
+    color: var(--text-color);
+}
+
+.contenedor__izquierdo {
+    left: 0;
+}
+
+.contenedor__derecho {
+    left: 50%;
+}
+
+.timeline__icon {
+    position: absolute;
+    font-size: 2.5rem;
+    width: 40px;
+    right: -20px;
+    top: 32px;
+    z-index: 10;
+    color: var(--main-color);
+}
+
+.contenedor__derecho .timeline__icon {
+    left: -20px;
+}
+
+.timeline::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: var(--main-color);
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: 10;
+    animation: moveline 6s linear forwards;
+}
+
+@keyframes moveline {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
+
+.timeline__box h2 {
+    font-weight: 600;
+}
+
+.contenedor__izquierdo__flecha {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #fff;
+    right: -15px;
+}
+
+.contenedor__derecho__flecha {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #fff;
+    left: -15px;
 }
 
 
-.educacion .contenido .tag {
-    font-size: 1.5rem;
-    padding-top: 1rem;
-    padding-left: 1.5rem;
-}
-
-.educacion .contenido .decs {
-    margin-left: 1.5rem;
-    padding-bottom: 1rem;
-}
-
-
-                                                            /* MEDIA QUERY EDUCACION */
-
-@media screen and (max-width: 600px) {
-
-    .educacion__h2 {
-        font-size: 3rem;
+@media screen and (max-width: 600px){
+    .timeline{
+        margin: 50px auto;
+    }
+    .timeline::after{
+        left: 31px;
+    }
+    .timeline__contenedor{
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 25px;
+    }
+    .timeline__box{
+        font-size: 13px;
+    }
+    .contenedor__derecho{
+        left: 0;
+    }
+    .contenedor__izquierdo .timeline__icon,
+    .contenedor__derecho .timeline__icon{
+        left: 10px;
     }
 
-    .educacion .contenedor::after {
-        font-size: 1.3rem;
-    }
-
-    .tag h2 {
-        font-size: 1rem;
-
-        margin-right: 2rem;
-    }
-
-    .decs p {
-        font-size: 0.6rem;
-
-        margin-right: 2rem;
+    .contenedor__derecho__flecha,
+    .contenedor__izquierdo__flecha{
+        border-right: 15px solid #fff;
+        border-left: 0;
+        left: -15px;
     }
 }
 
@@ -608,7 +646,7 @@ i.menu-close {
 
 .contacto__h2 {
     text-align: center;
-    margin-bottom: 3rem;
+    padding-bottom: 3rem;
     font-size: 4rem;
     color: var(--text-color);
 }
