@@ -587,7 +587,7 @@ i.menu-close {
     z-index: 1;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-left: 15px solid #fff;
+    border-left: 15px solid var(--bg-color);
     right: -15px;
 }
 
@@ -599,7 +599,7 @@ i.menu-close {
     z-index: 1;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-right: 15px solid #fff;
+    border-right: 15px solid var(--bg-color);
     left: -15px;
 }
 
@@ -629,7 +629,7 @@ i.menu-close {
 
     .contenedor__derecho__flecha,
     .contenedor__izquierdo__flecha{
-        border-right: 15px solid #fff;
+        border-right: 15px solid var(--bg-color);
         border-left: 0;
         left: -15px;
     }
